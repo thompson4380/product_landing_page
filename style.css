@@ -4,7 +4,8 @@ body {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
     background-color: green;
     padding: 10px;
     margin: 0px;
@@ -12,7 +13,8 @@ header {
 }
 
 nav {
-    margin: auto 0 auto auto;
+    justify-self: end;
+    align-self: center;
     font-size: 24px;
 }
 
@@ -30,7 +32,8 @@ nav a:hover {
     color: white;
     padding-left: 20px;
     font-size: 36px;
-    margin: auto 0 auto 0;
+    justify-self: start;
+    align-self: center;
 }
 
 #main {
@@ -55,11 +58,7 @@ nav a:hover {
     #main {
         width: 95%;
     }
-
-
 }
-
-
 
 #intro {
     font-size: 32;
@@ -109,9 +108,8 @@ article {
 }
 
 .cards {
-    display: flex;
-    justify-content: space-evenly; /* equal distribution starting and ending at the edges of the container */
-    flex-wrap: wrap; /* starts a new when necessary */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .fullCard {
